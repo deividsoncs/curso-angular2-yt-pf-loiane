@@ -9,9 +9,7 @@ import { CursoService } from './curso.service';
 export class CursosComponent implements OnInit {
 
   nomePortal: string;
-
-
-
+   
   cursos: string[] = [];
 
   constructor(private cursoService: CursoService) { 
