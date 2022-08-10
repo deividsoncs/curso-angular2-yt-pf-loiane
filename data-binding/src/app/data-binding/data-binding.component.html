@@ -2,6 +2,15 @@
 
 <section>
     <article>
-        <h3> Título {{ url }}</h3>
+        <h3> String renderizada com interpolação:  {{ url }}</h3>
+        <h3> Resultado de 1 + 1 é: {{ 1 + 1 }}</h3>
+        <h3> Resultado de 1 + 1 + função é: {{ 1 + 1 + getValor() }}</h3>
+        <h3> Resultado da função getCurtir é: {{ getCurtir() && cursoAngular ? 'Curso Legal' : ':(' }}</h3>
     </article>
+</section>
+
+<section>
+    <img src="{{ urlImagem }}" alt="???">
+    <img [src]="urlImagem" alt=">???">
+    <img bind-src="urlImagem" alt=">???">
 </section>
