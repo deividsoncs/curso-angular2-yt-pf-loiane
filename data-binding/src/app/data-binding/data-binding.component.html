@@ -1,16 +1,55 @@
 <p>data-binding works!</p>
 
-<section>
-    <article>
-        <h3> String renderizada com interpolação:  {{ url }}</h3>
-        <h3> Resultado de 1 + 1 é: {{ 1 + 1 }}</h3>
-        <h3> Resultado de 1 + 1 + função é: {{ 1 + 1 + getValor() }}</h3>
-        <h3> Resultado da função getCurtir é: {{ getCurtir() && cursoAngular ? 'Curso Legal' : ':(' }}</h3>
-    </article>
+<!-- <section>
+  <article>
+    <h3>String renderizada com interpolação: {{ url }}</h3>
+    <h3>Resultado de 1 + 1 é: {{ 1 + 1 }}</h3>
+    <h3>Resultado de 1 + 1 + função é: {{ 1 + 1 + getValor() }}</h3>
+    <h3>
+      Resultado da função getCurtir é:
+      {{ getCurtir() && cursoAngular ? "Curso Legal" : ":(" }}
+    </h3>
+  </article>
 </section>
 
 <section>
-    <img src="{{ urlImagem }}" alt="???">
-    <img [src]="urlImagem" alt=">???">
-    <img bind-src="urlImagem" alt=">???">
+  <img src="{{ urlImagem }}" alt="???" />
+  <img [src]="urlImagem" alt=">???" />
+  <img bind-src="urlImagem" alt=">???" />
+</section> -->
+
+<section>
+  <article>
+    <h3>Class e Style Binding</h3>
+
+    <div>Selecione uma classe</div>
+    <select #classe (change)="(0)">
+      <option value="alert-success">Sucesso</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-warning">Alerta</option>
+      <option value="alert-danger">Erro</option>
+    </select>
+    <br />
+    <br />
+
+    <div
+      class="alert"
+      role="alert"
+      [class.alert-success]="classe.value == 'alert-success'"
+      [class.alert-info]="classe.value == 'alert-info'"
+      [class.alert-warning]="classe.value == 'alert-warning'"
+      [class.alert-danger]="classe.value == 'alert-danger'"
+    >
+      Alerta {{ classe.value }}
+    </div>
+
+    <div class="alert {{ classe.value }}">
+        Colorido conforme o valor do combobox
+    </div>
+
+    <div class="alert alert-danger" role="alert"
+        [style.display]="classe.value == 'alert-danger' ? 'block' : 'none' ">
+        Só aparece em caso de erro!
+    </div> 
+  </article>
 </section>
