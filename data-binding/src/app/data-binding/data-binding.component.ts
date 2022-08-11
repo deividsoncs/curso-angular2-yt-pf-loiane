@@ -18,12 +18,10 @@ export class DataBindingComponent implements OnInit {
     'https://img.freepik.com/fotos-gratis/trabalhando-no-codigo_1098-19858.jpg';
 
   cursoAngular: boolean = true;
-
   valorAtual: string = "";
-
   valorSalvo: string = "";
-
   isMouseOver: boolean = false;
+  nomeDoCurso: string = 'Angular2'
 
   getValor() {
     return 1;
