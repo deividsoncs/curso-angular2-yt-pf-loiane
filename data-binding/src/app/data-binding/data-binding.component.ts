@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-data-binding',
@@ -22,18 +22,24 @@ export class DataBindingComponent implements OnInit {
   valorSalvo: string = "";
   isMouseOver: boolean = false;
   nomeDoCurso: string = 'Angular2'
-  
   valorInicial: number = 12;
 
-  getValor() {
+  nome: string = "ABC";
+
+  pessoa: any= {
+    idade: 0,
+    nome: 'def'
+  }
+
+  getValor(): number {
     return 1;
   }
 
-  getCurtir() {
+  getCurtir(): boolean {
     return true;
   }
 
-  botaoClicado(){
+  botaoClicado(): void {
     return alert('Botão clicado!');
   }
 

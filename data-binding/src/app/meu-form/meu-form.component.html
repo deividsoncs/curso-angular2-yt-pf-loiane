@@ -1,0 +1,45 @@
+<section>
+    <article>
+      <h3>Two-way data binding</h3>
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          [value]="nome"
+          (input)="nome = $any($event.target).value"
+        />
+
+        <button class="btn btn-info" (click)="showAlert()" > Faz um alert com o nome!</button>
+  
+        <!-- <p>Você digitou o {{ nome }}</p>
+  
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="nome"        
+        />
+  
+        <br/> 
+  
+        <input
+          type="text"
+          class="form-control"
+          bindon-ngModel="nome"        
+        />
+  
+        <p>Com Objeto:</p>
+        <p>Nome:</p>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="pessoa.nome"        
+        />
+        <p>Idade:</p>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="pessoa.idade"        
+        /> -->
+      </div> 
+    </article>
+  </section>

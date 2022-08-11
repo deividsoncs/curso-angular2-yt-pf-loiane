@@ -13,9 +13,12 @@ export class InputPropertyComponent implements OnInit {
   @Input('nome') 
   nomeCurso: string = '';
 
-  constructor() { }
+  constructor() {
+    //TODO
+   }
 
   ngOnInit(): void {
+    // TODO document why this method 'ngOnInit' is empty
   }
 
 }
