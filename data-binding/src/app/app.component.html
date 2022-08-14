@@ -28,9 +28,14 @@
 <!-- Toolbar -->
 <div class="content" role="banner">
   <div>
-    App Template Scope
+   
 
-    <app-data-binding></app-data-binding>
+    <!-- <app-data-binding></app-data-binding> -->
+
+    <ciclo *ngIf="!deletarCiclo" [valorInicial]="valor"></ciclo>
+    <button class="btn btn-info" (click)="mudarValor()">Mudar o Valor</button>
+    &nbsp;
+    <button class="btn btn-danger" (click)="destruirCiclo()">Deletar Ciclo</button> 
   </div>
 </div>
 
