@@ -1,1 +1,8 @@
-<p>diretiva-ngif works!</p>
+<h5>Diretiva ngIf</h5>
+
+<div *ngIf="cursos.length > 0">
+  <p>Lista de Cursos</p>
+  <ul>
+    <li *ngFor="let curso of cursos">{{ curso }}</li>
+  </ul>
+</div>
