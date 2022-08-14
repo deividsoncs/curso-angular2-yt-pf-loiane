@@ -2,7 +2,7 @@
 
     <div class="row">
         <button class="btn btn-info col-md-2" (click)="setMinus()">-</button>
-        <input class="form-control  col-md-2" readonly type="text" [value]="valor"/>
+        <input class="form-control  col-md-2" type="text" [value]="valor" #campoInput/>
         <button class="btn btn-info  col-md-2" (click)="setPlus()">+</button>
     </div>
 </div>
