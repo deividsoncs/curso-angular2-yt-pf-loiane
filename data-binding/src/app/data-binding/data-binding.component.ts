@@ -1,4 +1,4 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'app-data-binding',
@@ -9,7 +9,8 @@ import { Component, Inject, Input, OnInit } from '@angular/core';
       background-color: yellow;
       font-weight: bold;
     }
-  `]
+  `],
+  //outputs: ['mudouValor']
 })
 export class DataBindingComponent implements OnInit {
   url: string = 'http://loiane.com';
@@ -29,6 +30,11 @@ export class DataBindingComponent implements OnInit {
   pessoa: any= {
     idade: 0,
     nome: 'def'
+  }
+
+  //event customizado quando muda o valor do contador.
+  onMudouValor(evento: any){
+    console.log(evento.novoValor)
   }
 
   getValor(): number {

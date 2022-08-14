@@ -92,6 +92,16 @@
   </article>
 </section> -->
 
+<p>Contador com EventEmitter</p>
+<contador
+  [valor]="valorInicial"
+  (mudouValor)="onMudouValor($event)"
+></contador>
+<br/>
+
 <app-meu-form [nome]="nome" [pessoa]="pessoa" >  
 </app-meu-form>
+
+
+
 

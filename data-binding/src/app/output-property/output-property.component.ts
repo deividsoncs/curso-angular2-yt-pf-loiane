@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'contador',
@@ -11,22 +11,21 @@ export class OutputPropertyComponent implements OnInit {
 
   @Input() valor: number = 0;
 
-  mudouValor = new EventEmitter(); 
+  @Output() mudouValor = new EventEmitter(); 
 
   onClick(){
     alert("Clicou no botão!")
   }
 
-  onPlus() {
+  setPlus() {
     this.valor++;
+    this.mudouValor.emit({novoValor: this.valor})
   }
 
-  onMinus() {
+  setMinus() {
     this.valor--;
+    this.mudouValor.emit({novoValor: this.valor})
   }
-
-
-
 
   ngOnInit(): void {
   }
