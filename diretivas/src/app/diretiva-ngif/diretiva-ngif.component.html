@@ -1,7 +1,25 @@
 <h5>Diretiva ngIf</h5>
 
+<!-- 
+    Como manupula a árvore DOM é custo para o navegador, 
+    logo pode-se utilizadar a property bind HIDDEN,
+    recomendado para árveores grandes. 
+-->
+
 <div *ngIf="cursos.length > 0">
-  <p>Lista de Cursos</p>
+  <p>Lista de Cursos [ngIf]</p>
+  <ul>
+    <li *ngFor="let curso of cursos">{{ curso }}</li>
+  </ul>
+</div>
+
+<!-- 
+    Utilizando o property bind HIDDEN, ganho de performance
+    recomendando para ávore de elementos pequenas.
+    atenção caso em compartimentação de segurança.
+-->
+<div [hidden]="cursos.length == 0">
+  <p>Lista de Cursos [hidden]</p>
   <ul>
     <li *ngFor="let curso of cursos">{{ curso }}</li>
   </ul>
