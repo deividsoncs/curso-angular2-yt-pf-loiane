@@ -1,0 +1,22 @@
+<p>diretiva-ngclass works!</p>
+
+<h1>
+  <em
+    class="glyphicon"
+    [class.glyphicon-star-empty]="!meuFavorito"
+    [class.glyphicon-star]="meuFavorito"
+    (click)="onClick()"
+  ></em>
+  
+</h1>
+
+<h2>
+    <em
+    class="glyphicon"
+    [ngClass]="{
+        'glyphicon-star-empty': !meuFavorito,
+        'glyphicon-star': meuFavorito  
+    }"    
+    (click)="onClick()"
+  ></em>
+</h2>
