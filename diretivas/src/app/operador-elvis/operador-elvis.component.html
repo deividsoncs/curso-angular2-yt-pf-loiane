@@ -1,0 +1,7 @@
+<p>operador-elvis works!</p>
+
+<p>Descrição  {{ tarefa.desc }}</p>
+
+<p>Responsável: {{ tarefa.responsavel != null ? tarefa.responsavel.nome : 'sem responsável'}}</p>
+
+<p>Responsável: {{ tarefa.responsavel?.nome ?? 'sem responsável'}}</p>
